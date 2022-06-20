@@ -5,6 +5,9 @@ const shakebutton = document.querySelector('.shake');
 
 // Setup the canvas for drawing
 
+const width = canvas.width;
+const height = canvas.height;
+
 ctx.lineJoin = 'round';
 ctx.lineCap = 'round';
 ctx.lineWidth = 10;
