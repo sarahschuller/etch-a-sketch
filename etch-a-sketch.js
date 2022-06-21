@@ -15,7 +15,7 @@ const { width, height } = canvas; // destructured version of lines above
 let x = Math.floor(Math.random() * width);
 let y = Math.floor(Math.random() * width);
 
-
+// CTX is the context of the canvas
 ctx.lineJoin = 'round';
 ctx.lineCap = 'round';
 ctx.lineWidth = MOVE_AMOUNT;
