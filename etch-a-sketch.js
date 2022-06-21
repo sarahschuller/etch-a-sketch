@@ -39,6 +39,15 @@ function draw({ key }) {
         case 'Arrowup':
             y -= MOVE_AMOUNT;
             break;
+        case 'Arrowright':
+            x -= MOVE_AMOUNT;
+            break;
+         case 'Arrowdown':
+            y -= MOVE_AMOUNT;
+            break;
+        case 'Arrowleft':
+            x -= MOVE_AMOUNT;
+            break;
         default:
             break;
     }
