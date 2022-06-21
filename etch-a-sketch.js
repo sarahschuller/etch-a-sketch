@@ -20,6 +20,8 @@ ctx.lineJoin = 'round';
 ctx.lineCap = 'round';
 ctx.lineWidth = MOVE_AMOUNT;
 
+let hue = 0;
+ctx.strokeStyle = `hsl(${Math.random() * 360}, 100%, 50%)`;
 ctx.beginPath(); // Start the drawing
 ctx.moveTo(x, y);
 ctx.lineTo(x, y);
@@ -28,6 +30,9 @@ ctx.stroke();
 // Drawing function
 
 function draw({ key }) {
+    // Increment the hue
+    hue += 1;
+    ctx.strokeStyle = `hsl(${Math.random() * 360}, 100%, 50%)`;
     console.log(key);
 
     // Start the path
@@ -36,16 +41,16 @@ function draw({ key }) {
 
     // Move X & Y values depending on user input
     switch (key) {
-        case 'Arrowup':
+        case 'ArrowUp':
             y -= MOVE_AMOUNT;
             break;
-        case 'Arrowright':
-            x -= MOVE_AMOUNT;
+        case 'ArrowRight':
+            x += MOVE_AMOUNT;
             break;
-         case 'Arrowdown':
-            y -= MOVE_AMOUNT;
+         case 'ArrowDown':
+            y += MOVE_AMOUNT;
             break;
-        case 'Arrowleft':
+        case 'ArrowLeft':
             x -= MOVE_AMOUNT;
             break;
         default:
@@ -67,6 +72,9 @@ function handleKey(e){
 }
 
 // Clear/Shake function
+function clearCanvas() {
+    canvas.classList.add('shake');
+}
 
 // Listen for arrow keys
 window.addEventListener('keydown', handleKey);
