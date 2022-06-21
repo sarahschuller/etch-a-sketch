@@ -5,8 +5,13 @@ const shakebutton = document.querySelector('.shake');
 
 // Setup the canvas for drawing
 
-const width = canvas.width;
-const height = canvas.height;
+// const width = canvas.width;
+// const height = canvas.height;
+const { width, height } = canvas; // destructured version of lines above
+
+// Create random x & y starting points on the canvas
+
+let x = Math.floor(Math.random() * width);
 
 ctx.lineJoin = 'round';
 ctx.lineCap = 'round';
