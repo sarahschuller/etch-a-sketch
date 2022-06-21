@@ -26,8 +26,24 @@ ctx.stroke();
 
 // Drawing function
 
+function draw(options) {
+
+}
+
 // Handler for the keys
+
+function handleKey(e){
+   
+    if (e.key.includes('Arrow')) {
+        e.preventDefault();
+        draw({ key: e.key });
+        console.log(e.key);
+        console.log('Handling Keys');
+    }
+    
+}
 
 // Clear/Shake function
 
 // Listen for arrow keys
+window.addEventListener('keydown', handleKey);
