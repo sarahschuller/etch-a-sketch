@@ -11,15 +11,17 @@ const { width, height } = canvas; // destructured version of lines above
 
 // Create random x & y starting points on the canvas
 
-let x = Math.floor(Math.random() * width);
+const x = Math.floor(Math.random() * width);
+const y = Math.floor(Math.random() * width);
+
 
 ctx.lineJoin = 'round';
 ctx.lineCap = 'round';
 ctx.lineWidth = 10;
 
 ctx.beginPath(); // Start the drawing
-ctx.moveTo(200, 200);
-ctx.lineTo(200, 200);
+ctx.moveTo(x, y);
+ctx.lineTo(x, y);
 ctx.stroke();
 
 // Drawing function
